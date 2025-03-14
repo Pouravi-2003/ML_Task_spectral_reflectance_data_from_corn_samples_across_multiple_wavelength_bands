@@ -30,8 +30,33 @@ This dataset contains **spectral reflectance data** from **corn samples** obtain
 - The goal is to develop a model that accurately predicts the DON concentration based on spectral data.
 
 ---
-Instructions to install dependencies and run the code.
+### Instructions to install Libaries and run the code.
 
 ~~~
+import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
+%matplotlib inline
+import seaborn as sns
+from sklearn.ensemble import RandomForestRegressor
+from warnings import filterwarnings
+filterwarnings('ignore')
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense, Dropout
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
+
+from tensorflow.keras.optimizers import Adam
+from tensorflow.keras.wrappers.scikit_learn import KerasRegressor
+from sklearn.model_selection import RandomizedSearchCV
+#import numpy as np
+
+from tensorflow.keras.layers import Conv2D,Conv1D,MaxPooling1D, Dense, Flatten, Dropout, MaxPooling2D
+from tensorflow.keras.optimizers import Adam
+from tensorflow.keras.wrappers.scikit_learn import KerasRegressor
+from tensorflow.keras.layers import LSTM, Dense, Dropout , Bidirectional
 ~~~
+### **WorkFlows**
+```
+EDA & Feature Engineering --> Dimensionality Reduction --> Model Building & training by Given Data --> Model Evaluation
+```
